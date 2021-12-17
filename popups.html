@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<title>Jomo Kenyatta University of Agriculture and Technology</title>
+
+</head>
+<body>
+
+<div id= "map" style= "height:800px"></div>
+<script>
+var map=L.map('map').setView([-1.09647,37.01435],17);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{
+attribution:'&copy;<a href="http://osm.org/copyright">OpenStreetMap</a>contributors'
+}).addTo(map);
+	
+var LeafIcon = L.Icon.extend({
+		options: {
+			shadowUrl: 'leaf-shadow.png',
+			iconSize:     [38, 95],
+			shadowSize:   [50, 64],
+			iconAnchor:   [22, 94],
+			shadowAnchor: [4, 62],
+			popupAnchor:  [-3, -76]
+	}
+});
+
+var greenIcon = new LeafIcon({iconUrl: 'https://img.icons8.com/office/452/marker.png'});
+var redIcon = new LeafIcon({iconUrl: 'https://img.icons8.com/office/452/marker.png'});
+var orangeIcon = new LeafIcon({iconUrl: 'https://img.icons8.com/office/452/marker.png'});
+var blueIcon = new LeafIcon({iconUrl: 'https://img.icons8.com/office/452/marker.png'});
+var yellowIcon = new LeafIcon({iconUrl: 'https://img.icons8.com/office/452/marker.png'});
+
+
+var mGreen = L.marker([-1.096592710164462, 37.012895932087645], {icon: greenIcon}).bindPopup('jkuathspt.').addTo(map);
+var mRed = L.marker([-1.0956274044861438, 37.015375012191114], {icon: redIcon}).bindPopup('jkuathall.').addTo(map);
+var mOrange = L.marker([-1.0963672067581793, 37.014387232476686], {icon: orangeIcon}).bindPopup('jkuatadmblock.').addTo(map);
+var mBlue = L.marker([-1.0994546139624233, 37.01151914716757], {icon: blueIcon}).bindPopup('jkuatkcbbank.').addTo(map);
+var mYelow = L.marker([-1.0906478103954933, 37.014594156730126], {icon: yellowIcon}).bindPopup('jkuatfields.').addTo(map);
+
+</script>
+</body>
+</html>
