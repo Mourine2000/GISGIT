@@ -1,0 +1,676 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><script type="text/javascript" src="../resource/org.apache.wicket.resource.JQueryResourceReference/jquery/jquery-1.12.4-ver-ADBA03E22274074BEE5842FCD9720FBD.js"></script>
+<script type="text/javascript" src="../resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/res/js/wicket-event-jquery-ver-E34C6FE16C54FE3DF3591290A48A496A.js"></script>
+<script type="text/javascript" src="../resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/res/js/wicket-ajax-jquery-ver-8222D62FFF24E724566C813AE5124575.js"></script>
+<script type="text/javascript" id="wicket-ajax-base-url">
+/*<![CDATA[*/
+Wicket.Ajax.baseUrl="wicket/bookmarkable/org.geoserver.web.demo.MapPreviewPage?0";
+/*]]>*/
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>GeoServer: Layer Preview</title>
+    <link href="../resource/org.geoserver.web.GeoServerBasePage/favicon-ver-CD7C91844A87FE589C62DFE238A2ACA7.ico" rel="shortcut icon">
+	
+      <link rel="stylesheet" href="../resource/org.geoserver.web.GeoServerBasePage/css/blueprint/screen-ver-5E7BA86A4C3BEA6B457AC3C7F9ADF9B4.css" type="text/css" media="screen, projection">
+      
+      
+      <link rel="stylesheet" href="../resource/org.geoserver.web.GeoServerBasePage/css/blueprint/print-ver-BBB913C92FDF844CBAD576E7BB0B2A96.css" type="text/css" media="print">
+      
+       
+	  <link rel="stylesheet" href="../resource/org.geoserver.web.GeoServerBasePage/css/geoserver-ver-4BE8003FDFA339361FE1F8E018413D84.css" type="text/css" media="screen, projection">
+	  
+      <!--[if IE]>
+      
+        <link rel="stylesheet" href="../resource/org.geoserver.web.GeoServerBasePage/css/blueprint/ie-ver-830652BCF971CCAF4FB29B4A140F9430.css" type="text/css" media="screen, projection"/>
+        
+      <![endif]-->
+      
+      <script type="text/javascript" src="../resource/org.geoserver.web.GeoServerBasePage/js/jquery.placeholder-ver-6E6E735FF3A1792243C593D1E48D6AE1.js"></script>
+      
+	<script type="text/javascript" src="../resource/org.geoserver.web.demo.MapPreviewPage/mappreview_keyshortcut-ver-53DBA8B7B51005F654E624BEE0441D3B.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+Wicket.Event.add(window, "domready", function(event) { 
+Wicket.Ajax.ajax({"u":"./org.geoserver.web.demo.MapPreviewPage?0-1.IBehaviorListener.0-table-filterForm-submit","m":"POST","c":"id2","f":"id1","sc":"p::submit","i":"ajaxFeedback","e":"click","pd":true});;
+Wicket.Ajax.ajax({"u":"./org.geoserver.web.demo.MapPreviewPage?0-1.IBehaviorListener.0-table-listContainer-sortableLinks-0-header-link","c":"id3","i":"ajaxFeedback","e":"click"});;
+Wicket.Ajax.ajax({"u":"./org.geoserver.web.demo.MapPreviewPage?0-1.IBehaviorListener.0-table-listContainer-sortableLinks-1-header-link","c":"id4","i":"ajaxFeedback","e":"click"});;
+Wicket.Ajax.ajax({"u":"./org.geoserver.web.demo.MapPreviewPage?0-1.IBehaviorListener.0-table-listContainer-sortableLinks-2-header-link","c":"id5","i":"ajaxFeedback","e":"click"});;
+Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
+;});
+/*]]>*/
+</script>
+</head>
+<body>
+  <div id="header">
+    <div class="wrap">
+      <h2><a class="pngfix" href="../../"><span>GeoServer 2.13.0</span></a></h2>
+      <div class="button-group selfclear">
+	      <span>
+	      	<form style="display: inline-block;" method="post" action="../../../j_spring_security_check">
+	      		<span><label class="noshow" for="username"><wicket:message key="username">Username</wicket:message></label>
+<input autocomplete="on" id="username" type="text" name="username" value="" title="username" placeholder="username" wicket:message="title:username,placeholder:username">
+<label class="noshow" for="password"><wicket:message key="password">Password</wicket:message></label>
+<input autocomplete="on" id="password" type="password" name="password" value="" title="password" placeholder="password" wicket:message="title:password,placeholder:passwordGeoServer">
+<label class="shown" for="_spring_security_remember_me"><wicket:message key="rememberMe">Remember me</wicket:message></label>
+<input id="_spring_security_remember_me" type="checkbox" name="_spring_security_remember_me">
+</span>
+	      		<button class="positive icon" type="submit">
+	      			<div><img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/door-in-ver-4871EA9656EEBF15C2F83BF4E25B0EBB.png" alt="Login"><span>Login</span></div>
+	      		</button>
+		        <script type="text/javascript">
+/*<![CDATA[*/
+
+		            $('input, textarea').placeholder();
+		        
+/*]]>*/
+</script>	      		
+	      	</form>
+	      </span>
+	      
+	      
+	      <span>
+	      			      
+	      </span>
+      </div>
+    </div><!-- /.wrap -->
+  </div><!-- /#header -->
+  <div id="main">
+    <div class="wrap selfclear">
+    <div id="sidebar">
+      
+      <ul id="navigation">
+        <li class="navigation-tab">
+          <div class="navigation-tab-header">
+            <span>About &amp; Status</span>
+          </div>
+          <ul class="navigation-tab-content plain">
+            <li class="nav-administer-service">
+              <a href="./org.geoserver.web.AboutGeoServerPage" title="General information about GeoServer">
+                <img src="../resource/org.geoserver.web.AboutGeoServerPage/img/icons/silk/help-ver-C3812C74BC524179F4CCF5D2DB7B3CBF.png" alt="About GeoServer"><span>About GeoServer</span>
+              </a>
+            </li>
+          </ul>
+        </li><li class="navigation-tab">
+          <div class="navigation-tab-header">
+            <span>Data</span>
+          </div>
+          <ul class="navigation-tab-content plain">
+            <li class="nav-administer-service">
+              <a href="./org.geoserver.web.demo.MapPreviewPage" title="List of all layers configured in GeoServer and provides previews in various formats for each.">
+                <img src="../resource/org.geoserver.web.demo.MapPreviewPage/::/img/icons/geosilk/map-ver-3085230CE03A9A93A074669E4C194432.png" alt="Layer Preview"><span>Layer Preview</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="navigation-tab">
+          <div class="navigation-tab-single">
+             <a href="./org.geoserver.web.DemoPage" title="GeoServer Demonstrations"><span>Demos</span></a>
+          </div>
+        </li>
+      </ul>
+      
+    </div><!-- /#sidebar -->
+    <div id="page" class="selfclear">
+      <div class="page-header">
+        <div id="topFeedback">
+  
+</div>
+        <h1>Layer Preview</h1>
+        <p>List of all layers configured in GeoServer and provides previews in various formats for each.</p>
+        <div class="header-panel"></div>
+      </div>
+      <div class="page-pane selfclear">
+        
+  <!-- the table component -->
+  <div id="id6">
+    <!--  the pager/filter top block -->
+	<form id="id1" method="post" action="./org.geoserver.web.demo.MapPreviewPage?0-1.IFormSubmitListener-table-filterForm"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="id1_hf_0" id="id1_hf_0"></div><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="text" autocomplete="off"><input type="submit" name="p::submit" onclick=" var b=document.getElementById('id2'); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != 'undefined') {  var r = Wicket.bind(b.onclick, b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
+	        <div class="leftwise">
+	            <span id="id7">
+	<span class="paginator" id="id8">
+	<a class="first" id="id9" disabled="disabled" title="Go to first page">&lt;&lt;</a>
+	<a rel="prev" class="prev" id="ida" disabled="disabled" title="Go to previous page">&lt;</a>
+	<span class="goto">
+		<a id="idb" disabled="disabled" title="Go to page 1"><span>1</span></a>
+	</span>
+	<a rel="next" class="next" id="idc" disabled="disabled" title="Go to next page">&gt;</a>
+	<a class="last" id="idd" disabled="disabled" title="Go to last page">&gt;&gt;</a>
+</span>
+	<span>Results 1 to 23 (out of 23 items)</span>
+</span>
+            </div>
+            <div class="rightwise">
+                <input id="filter" class="rigthwise search" type="text" size="35" title="Search" placeholder="Search" value="" name="filter" onkeypress="if(event.keyCode == 13) {document.getElementById('id2').click();return false;}">
+	            <input class="noshow" type="submit" value="Search" name="p::submit" id="id2">
+	            <script type="text/javascript">
+/*<![CDATA[*/
+
+                    $('input, textarea').placeholder();
+	            
+/*]]>*/
+</script>
+            </div>
+	</form>
+
+	<!--  the table -->
+	<table class="clearBoth" style="empty-cells: show" cellspacing="0" id="ide">
+		<thead>
+			<tr>
+			  <!-- The select all checkbox -->
+			  
+			  <!-- This is a repeater, will generate one th for each property -->
+			  <th><div>
+		<a href="javascript:;" id="id3"><span>Type</span></a>
+	</div></th><th><div>
+		<a href="javascript:;" id="id4"><span>Title</span></a>
+	</div></th><th><div>
+		<a href="javascript:;" id="id5"><span>Name</span></a>
+	</div></th><th><div>Common Formats</div></th><th><div>All Formats</div></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="idf" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/shape_square_blue-ver-C260F684144799B37A8F4B2963A62684.png">
+  </span></td><td><span>World rectangle</span></td><td><span>tiger:giant_polygon</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:giant_polygon&amp;styles=&amp;bbox=-180.0,-90.0,180.0,90.0&amp;width=768&amp;height=384&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/tiger/wms/kml?layers=tiger:giant_polygon">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/tiger/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger:giant_polygon&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:giant_polygon&amp;styles=&amp;bbox=-180.0,-90.0,180.0,90.0&amp;width=768&amp;height=384&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/tiger/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger:giant_polygon&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id10" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/bullet_blue-ver-E5CAD03C7D23FEDC6D0F5C9242242EF6.png">
+  </span></td><td><span>Manhattan (NY) points of interest</span></td><td><span>tiger:poi</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:poi&amp;styles=&amp;bbox=-74.0118315772888,40.70754683896324,-74.00153046439813,40.719885123828675&amp;width=641&amp;height=768&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/tiger/wms/kml?layers=tiger:poi">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/tiger/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger:poi&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:poi&amp;styles=&amp;bbox=-74.0118315772888,40.70754683896324,-74.00153046439813,40.719885123828675&amp;width=641&amp;height=768&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/tiger/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger:poi&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id11" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/shape_square_blue-ver-C260F684144799B37A8F4B2963A62684.png">
+  </span></td><td><span>Manhattan (NY) landmarks</span></td><td><span>tiger:poly_landmarks</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:poly_landmarks&amp;styles=&amp;bbox=-74.047185,40.679648,-73.90782,40.882078&amp;width=528&amp;height=768&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/tiger/wms/kml?layers=tiger:poly_landmarks">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/tiger/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger:poly_landmarks&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:poly_landmarks&amp;styles=&amp;bbox=-74.047185,40.679648,-73.90782,40.882078&amp;width=528&amp;height=768&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/tiger/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger:poly_landmarks&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id12" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/line_blue-ver-D8A029FCA88225EDC004F28E0F47A40E.png">
+  </span></td><td><span>Manhattan (NY) roads</span></td><td><span>tiger:tiger_roads</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:tiger_roads&amp;styles=&amp;bbox=-74.02722,40.684221,-73.907005,40.878178&amp;width=476&amp;height=768&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/tiger/wms/kml?layers=tiger:tiger_roads">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/tiger/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger:tiger_roads&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/tiger/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger:tiger_roads&amp;styles=&amp;bbox=-74.02722,40.684221,-73.907005,40.878178&amp;width=476&amp;height=768&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/tiger/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger:tiger_roads&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id13" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/geosilk/raster-ver-4ED17DFD18105C9E705684E1BAE98304.png">
+  </span></td><td><span>A sample ArcGrid file</span></td><td><span>nurc:Arc_Sample</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/nurc/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=nurc:Arc_Sample&amp;styles=&amp;bbox=-180.0,-90.0,180.0,90.0&amp;width=768&amp;height=384&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/nurc/wms/kml?layers=nurc:Arc_Sample">KML</a>&nbsp;</div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/nurc/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=nurc:Arc_Sample&amp;styles=&amp;bbox=-180.0,-90.0,180.0,90.0&amp;width=768&amp;height=384&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/nurc/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=nurc:Arc_Sample&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id14" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/geosilk/raster-ver-4ED17DFD18105C9E705684E1BAE98304.png">
+  </span></td><td><span>North America sample imagery</span></td><td><span>nurc:Img_Sample</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/nurc/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=nurc:Img_Sample&amp;styles=&amp;bbox=-130.85168,20.7052,-62.0054,54.1141&amp;width=768&amp;height=372&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/nurc/wms/kml?layers=nurc:Img_Sample">KML</a>&nbsp;</div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/nurc/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=nurc:Img_Sample&amp;styles=&amp;bbox=-130.85168,20.7052,-62.0054,54.1141&amp;width=768&amp;height=372&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/nurc/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=nurc:Img_Sample&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id15" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/geosilk/raster-ver-4ED17DFD18105C9E705684E1BAE98304.png">
+  </span></td><td><span>Pk50095</span></td><td><span>nurc:Pk50095</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/nurc/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=nurc:Pk50095&amp;styles=&amp;bbox=347649.93086859107,5176214.082539256,370725.976428591,5196961.352859256&amp;width=768&amp;height=690&amp;srs=EPSG:32633&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/nurc/wms/kml?layers=nurc:Pk50095">KML</a>&nbsp;</div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/nurc/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=nurc:Pk50095&amp;styles=&amp;bbox=347649.93086859107,5176214.082539256,370725.976428591,5196961.352859256&amp;width=768&amp;height=690&amp;srs=EPSG:32633&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/nurc/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=nurc:Pk50095&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id16" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/geosilk/raster-ver-4ED17DFD18105C9E705684E1BAE98304.png">
+  </span></td><td><span>mosaic</span></td><td><span>nurc:mosaic</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/nurc/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=nurc:mosaic&amp;styles=&amp;bbox=6.346,36.492,20.83,46.591&amp;width=768&amp;height=535&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/nurc/wms/kml?layers=nurc:mosaic">KML</a>&nbsp;</div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/nurc/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=nurc:mosaic&amp;styles=&amp;bbox=6.346,36.492,20.83,46.591&amp;width=768&amp;height=535&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/nurc/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=nurc:mosaic&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id17" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/shape_square_blue-ver-C260F684144799B37A8F4B2963A62684.png">
+  </span></td><td><span>USA Population</span></td><td><span>topp:states</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:states&amp;styles=&amp;bbox=-124.73142200000001,24.955967,-66.969849,49.371735&amp;width=768&amp;height=330&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/wms/kml?layers=topp:states">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:states&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:states&amp;styles=&amp;bbox=-124.73142200000001,24.955967,-66.969849,49.371735&amp;width=768&amp;height=330&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:states&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id18" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/bullet_blue-ver-E5CAD03C7D23FEDC6D0F5C9242242EF6.png">
+  </span></td><td><span>Tasmania cities</span></td><td><span>topp:tasmania_cities</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:tasmania_cities&amp;styles=&amp;bbox=145.19754,-43.423512,148.27298000000002,-40.852802&amp;width=768&amp;height=641&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/wms/kml?layers=topp:tasmania_cities">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:tasmania_cities&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:tasmania_cities&amp;styles=&amp;bbox=145.19754,-43.423512,148.27298000000002,-40.852802&amp;width=768&amp;height=641&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:tasmania_cities&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id19" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/line_blue-ver-D8A029FCA88225EDC004F28E0F47A40E.png">
+  </span></td><td><span>Tasmania roads</span></td><td><span>topp:tasmania_roads</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:tasmania_roads&amp;styles=&amp;bbox=145.19754,-43.423512,148.27298000000002,-40.852802&amp;width=768&amp;height=641&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/wms/kml?layers=topp:tasmania_roads">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:tasmania_roads&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:tasmania_roads&amp;styles=&amp;bbox=145.19754,-43.423512,148.27298000000002,-40.852802&amp;width=768&amp;height=641&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:tasmania_roads&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id1a" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/shape_square_blue-ver-C260F684144799B37A8F4B2963A62684.png">
+  </span></td><td><span>Tasmania state boundaries</span></td><td><span>topp:tasmania_state_boundaries</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:tasmania_state_boundaries&amp;styles=&amp;bbox=143.83482400000003,-43.648056,148.47914100000003,-39.573891&amp;width=768&amp;height=673&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/wms/kml?layers=topp:tasmania_state_boundaries">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:tasmania_state_boundaries&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:tasmania_state_boundaries&amp;styles=&amp;bbox=143.83482400000003,-43.648056,148.47914100000003,-39.573891&amp;width=768&amp;height=673&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:tasmania_state_boundaries&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id1b" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/shape_square_blue-ver-C260F684144799B37A8F4B2963A62684.png">
+  </span></td><td><span>Tasmania water bodies</span></td><td><span>topp:tasmania_water_bodies</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:tasmania_water_bodies&amp;styles=&amp;bbox=145.97161899999998,-43.031944,147.219696,-41.775558&amp;width=762&amp;height=768&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/wms/kml?layers=topp:tasmania_water_bodies">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:tasmania_water_bodies&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/topp/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=topp:tasmania_water_bodies&amp;styles=&amp;bbox=145.97161899999998,-43.031944,147.219696,-41.775558&amp;width=762&amp;height=768&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/topp/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=topp:tasmania_water_bodies&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id1c" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/bullet_blue-ver-E5CAD03C7D23FEDC6D0F5C9242242EF6.png">
+  </span></td><td><span>Spearfish archeological sites</span></td><td><span>sf:archsites</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:archsites&amp;styles=&amp;bbox=589851.4376666048,4914490.882968263,608346.4603107043,4926501.8980334345&amp;width=768&amp;height=498&amp;srs=EPSG:26713&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/wms/kml?layers=sf:archsites">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:archsites&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:archsites&amp;styles=&amp;bbox=589851.4376666048,4914490.882968263,608346.4603107043,4926501.8980334345&amp;width=768&amp;height=498&amp;srs=EPSG:26713&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:archsites&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id1d" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/bullet_blue-ver-E5CAD03C7D23FEDC6D0F5C9242242EF6.png">
+  </span></td><td><span>Spearfish bug locations</span></td><td><span>sf:bugsites</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:bugsites&amp;styles=&amp;bbox=590223.4382724703,4914107.882513998,608462.4604629107,4920523.89081033&amp;width=768&amp;height=330&amp;srs=EPSG:26713&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/wms/kml?layers=sf:bugsites">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:bugsites&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:bugsites&amp;styles=&amp;bbox=590223.4382724703,4914107.882513998,608462.4604629107,4920523.89081033&amp;width=768&amp;height=330&amp;srs=EPSG:26713&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:bugsites&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id1e" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/shape_square_blue-ver-C260F684144799B37A8F4B2963A62684.png">
+  </span></td><td><span>Spearfish restricted areas</span></td><td><span>sf:restricted</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:restricted&amp;styles=&amp;bbox=591579.1858092896,4916236.662227167,599648.9251686076,4925872.146218054&amp;width=643&amp;height=768&amp;srs=EPSG:26713&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/wms/kml?layers=sf:restricted">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:restricted&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:restricted&amp;styles=&amp;bbox=591579.1858092896,4916236.662227167,599648.9251686076,4925872.146218054&amp;width=643&amp;height=768&amp;srs=EPSG:26713&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:restricted&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id1f" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/line_blue-ver-D8A029FCA88225EDC004F28E0F47A40E.png">
+  </span></td><td><span>Spearfish roads</span></td><td><span>sf:roads</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:roads&amp;styles=&amp;bbox=589434.8564686741,4914006.337837095,609527.2102150217,4928063.398014731&amp;width=768&amp;height=537&amp;srs=EPSG:26713&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/wms/kml?layers=sf:roads">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:roads&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:roads&amp;styles=&amp;bbox=589434.8564686741,4914006.337837095,609527.2102150217,4928063.398014731&amp;width=768&amp;height=537&amp;srs=EPSG:26713&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:roads&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id20" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/geosilk/raster-ver-4ED17DFD18105C9E705684E1BAE98304.png">
+  </span></td><td><span>Spearfish elevation</span></td><td><span>sf:sfdem</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:sfdem&amp;styles=&amp;bbox=589980.0,4913700.0,609000.0,4928010.0&amp;width=768&amp;height=577&amp;srs=EPSG:26713&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/wms/kml?layers=sf:sfdem">KML</a>&nbsp;</div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:sfdem&amp;styles=&amp;bbox=589980.0,4913700.0,609000.0,4928010.0&amp;width=768&amp;height=577&amp;srs=EPSG:26713&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:sfdem&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id21" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/line_blue-ver-D8A029FCA88225EDC004F28E0F47A40E.png">
+  </span></td><td><span>Spearfish streams</span></td><td><span>sf:streams</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:streams&amp;styles=&amp;bbox=589434.4971235897,4913947.342298816,609518.2117427464,4928071.049965891&amp;width=768&amp;height=540&amp;srs=EPSG:26713&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/wms/kml?layers=sf:streams">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:streams&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/sf/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=sf:streams&amp;styles=&amp;bbox=589434.4971235897,4913947.342298816,609518.2117427464,4928071.049965891&amp;width=768&amp;height=540&amp;srs=EPSG:26713&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/sf/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=sf:streams&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id22" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/bullet_blue-ver-E5CAD03C7D23FEDC6D0F5C9242242EF6.png">
+  </span></td><td><span>KiambuSecondary</span></td><td><span>PostGisData:KiambuSecondary</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/PostGisData/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=PostGisData:KiambuSecondary&amp;styles=&amp;bbox=36.58,-1.28,37.34,-0.85&amp;width=768&amp;height=434&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/PostGisData/wms/kml?layers=PostGisData:KiambuSecondary">KML</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/PostGisData/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=PostGisData:KiambuSecondary&amp;maxFeatures=50">GML</a></div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/PostGisData/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=PostGisData:KiambuSecondary&amp;styles=&amp;bbox=36.58,-1.28,37.34,-0.85&amp;width=768&amp;height=434&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/PostGisData/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=PostGisData:KiambuSecondary&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           <option value="csv">CSV</option><option value="text%2Fxml%3B%20subtype%3Dgml%2F2.1.2">GML2</option><option value="gml3">GML3.1</option><option value="application%2Fgml%2Bxml%3B%20version%3D3.2">GML3.2</option><option value="application%2Fjson">GeoJSON</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML</option><option value="SHAPE-ZIP">Shapefile</option>
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id23" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/layers-ver-A13DE972B638EC78F2A83894515FF4E7.png">
+  </span></td><td><span>Spearfish</span></td><td><span>spearfish</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=spearfish&amp;styles=&amp;bbox=589425.9342365642,4913959.224611808,609518.6719560538,4928082.949945881&amp;width=768&amp;height=539&amp;srs=EPSG:26713&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/wms/kml?layers=spearfish">KML</a>&nbsp;</div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=spearfish&amp;styles=&amp;bbox=589425.9342365642,4913959.224611808,609518.6719560538,4928082.949945881&amp;width=768&amp;height=539&amp;srs=EPSG:26713&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=spearfish&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id24" class="odd">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/layers-ver-A13DE972B638EC78F2A83894515FF4E7.png">
+  </span></td><td><span>Tasmania</span></td><td><span>tasmania</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tasmania&amp;styles=&amp;bbox=143.83482400000003,-43.648056,148.47914100000003,-39.573891&amp;width=768&amp;height=673&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/wms/kml?layers=tasmania">KML</a>&nbsp;</div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tasmania&amp;styles=&amp;bbox=143.83482400000003,-43.648056,148.47914100000003,-39.573891&amp;width=768&amp;height=673&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tasmania&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           
+       </optgroup>
+    </select>
+  </span></td>
+			</tr><tr id="id25" class="even">
+			  <!-- The select row checkbox -->
+			  
+			  <!-- This is a repeater, will generate one td for each property -->
+			  <td><span>
+    <img src="../resource/org.geoserver.web.GeoServerBasePage/img/icons/silk/layers-ver-A13DE972B638EC78F2A83894515FF4E7.png">
+  </span></td><td><span>TIGER New York</span></td><td><span>tiger-ny</span></td><td><span>
+  <div style="white-space: nowrap;"><a target="_blank" href="http://localhost:8080/geoserver/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger-ny&amp;styles=&amp;bbox=-74.047185,40.679648,-73.907005,40.882078&amp;width=531&amp;height=768&amp;srs=EPSG:4326&amp;format=application/openlayers">OpenLayers</a>&nbsp;<a target="_blank" href="http://localhost:8080/geoserver/wms/kml?layers=tiger-ny">KML</a>&nbsp;</div>
+  </span></td><td><span>
+    <select onchange="window.open((this.options[this.selectedIndex].parentNode.label == 'WMS') ? 'http://localhost:8080/geoserver/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=tiger-ny&amp;styles=&amp;bbox=-74.047185,40.679648,-73.907005,40.882078&amp;width=531&amp;height=768&amp;srs=EPSG:4326&amp;format=' + this.options[this.selectedIndex].value : 'http://localhost:8080/geoserver/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=tiger-ny&amp;maxFeatures=50&amp;outputFormat=' + this.options[this.selectedIndex].value);this.selectedIndex=0">
+      <option>Select one</option>
+      <optgroup label="WMS">
+          <option value="application%2Fatom%20xml">AtomPub</option><option value="image%2Fgif">GIF</option><option value="application%2Frss%2Bxml">GeoRSS</option><option value="image%2Fgeotiff">GeoTiff</option><option value="image%2Fgeotiff8">GeoTiff 8-bits</option><option value="image%2Fjpeg">JPEG</option><option value="image%2Fvnd.jpeg-png">JPEG-PNG</option><option value="application%2Fvnd.google-earth.kmz%20xml">KML (compressed)</option><option value="application%2Fvnd.google-earth.kml%2Bxml%3Bmode%3Dnetworklink">KML (network link)</option><option value="application%2Fvnd.google-earth.kml%2Bxml">KML (plain)</option><option value="text%2Fhtml%3B%20subtype%3Dopenlayers">OpenLayers</option><option value="application%2Fopenlayers2">OpenLayers 2</option><option value="application%2Fopenlayers3">OpenLayers 3</option><option value="application%2Fpdf">PDF</option><option value="image%2Fpng">PNG</option><option value="image%2Fpng%3B%20mode%3D8bit">PNG 8bit</option><option value="image%2Fsvg%20xml">SVG</option><option value="image%2Ftiff">Tiff</option><option value="image%2Ftiff8">Tiff 8-bits</option><option value="application%2Fjson%3Btype%3Dutfgrid">UTFGrid</option>
+      </optgroup>
+      <optgroup label="WFS">
+           
+       </optgroup>
+    </select>
+  </span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- the bottom pager -->
+    <span id="id26">
+	<span class="paginator" id="id27">
+	<a class="first" id="id28" disabled="disabled" title="Go to first page">&lt;&lt;</a>
+	<a rel="prev" class="prev" id="id29" disabled="disabled" title="Go to previous page">&lt;</a>
+	<span class="goto">
+		<a id="id2a" disabled="disabled" title="Go to page 1"><span>1</span></a>
+	</span>
+	<a rel="next" class="next" id="id2b" disabled="disabled" title="Go to next page">&gt;</a>
+	<a class="last" id="id2c" disabled="disabled" title="Go to last page">&gt;&gt;</a>
+</span>
+	<span>Results 1 to 23 (out of 23 items)</span>
+</span>
+
+	<!-- Sortable header fragments -->
+	
+
+	<!-- Pagination fragment -->
+	
+
+	
+</div>
+  
+  <!-- The fragment for the icon -->
+  
+  
+  <!-- The fragment for the common links -->
+  
+  
+  <!--  The custom drop down with optgroups -->
+  
+
+      </div>
+      <div class="page-footer">
+        <div id="bottomFeedback">
+  
+</div>
+      </div>
+    </div><!-- /#page -->
+    </div><!-- /.wrap> -->
+  </div><!-- /#main -->
+  <div id="ajaxFeedback" style="display: none">
+    <img alt="Loading..." src="../resource/org.geoserver.web.GeoServerBasePage/img/ajax-loader-ver-A51C5608D01ACF32DF728F299767F82B.gif">
+  </div>
+
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
+  open() { return this._call('open', []); },
+  setLoginToken(e) { return this._call('setLoginToken', [e]); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.8561261323603246', methodName, methodArgs }, 'http://localhost:8080');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body></html>
